@@ -1,1 +1,19 @@
+$font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+$thin: 300;
+$normal: 400;
+$bold: 600;
+
 $shadow: rgba(0, 0, 0, 0.1);
+$white: #fff;
+
+$colorPrimary: #6a73da;
+$colorDefault: #39353c;
+$colorSecondary: #625d66;
+$colorDisabled: #e6e2e7;
+$colorError: #e36868;
+
+@mixin background() {
+  background: #c33764;
+  background: linear-gradient(to top, #1d2671, #c33764);
+}

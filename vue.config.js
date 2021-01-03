@@ -12,4 +12,11 @@ module.exports = {
       modules: [resolve('src')],
     },
   },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: [resolve('src/styles/variables.scss')],
+    },
+  },
 }

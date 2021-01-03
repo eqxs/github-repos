@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "0.21.1",
     "core-js": "3.8.1",
+    "humanize": "0.0.9",
     "vue": "2.6.12",
     "vue-infinite-loading": "2.4.5"
   },
@@ -26,6 +27,8 @@
     "node-sass": "5.0.0",
     "prettier": "2.2.1",
     "sass-loader": "10.1.0",
+    "style-resources-loader": "1.4.1",
+    "vue-cli-plugin-style-resources-loader": "0.1.4",
     "vue-template-compiler": "2.6.12"
   },
   "gitHooks": {
