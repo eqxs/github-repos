@@ -52,17 +52,17 @@
         </tbody>
       </table>
 
-      <infinite-loading :identifier="infiniteId" @infinite="infiniteHandler">
+      <infinite-loading @infinite="infiniteHandler">
         <template #no-results>
           <div class="qxs-table__empty">No data</div>
         </template>
         <template #no-more>
           <div class="qxs-table__empty">No more data</div>
         </template>
-        <template #error>
+        <template #error="{ trigger }">
           <div class="qxs-table__error">
             <div>Failed to load</div>
-            <button class="qxs-table__button" @click="reset">Reset</button>
+            <button class="qxs-table__button" @click="trigger">Reset</button>
           </div>
         </template>
       </infinite-loading>
@@ -95,10 +95,6 @@ export default {
     },
   },
 
-  data: () => ({
-    infiniteId: +new Date(),
-  }),
-
   computed: {
     columnsStyle() {
       return this.columns.map(({ width }) => ({ width }))
@@ -108,10 +104,6 @@ export default {
   methods: {
     infiniteHandler($state) {
       this.$emit('fetch', $state)
-    },
-
-    reset() {
-      this.infiniteId = +new Date()
     },
   },
 }
