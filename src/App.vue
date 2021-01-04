@@ -91,7 +91,7 @@ export default {
         this.repos.push(...(data?.items ?? []))
         this.page++
 
-        if (this.page > 5) $state.complete()
+        if (this.page > 50) $state.complete()
         else $state.loaded()
       } catch {
         $state.error()
